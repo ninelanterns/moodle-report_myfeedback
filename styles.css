@@ -1420,11 +1420,11 @@ also the blank invisible column that shows up on ColVis hide/Show list*/
 
 .path-report-myfeedback aside#block-region-side-pre,
 .path-report-myfeedback aside#block-region-side-post {
-    display:none;
+    /*display:none;*/
 }
 
 .path-report-myfeedback #region-main {
-    width: 100%;
+    /*width: 100%;*/
 }
 .path-report-myfeedback table.fixedHeader-floating {
   position: fixed !important;

@@ -78,12 +78,14 @@ if ($userid != $USER->id) {
         }
     }
     echo '<div class="enroltext">' . get_string('enrolledmodules', 'report_myfeedback') .
-    ' <span class="enrolledon">' . $courselist . '</span></div>';
+    ' <span class="enrolledon">' . $courselist . '</span>';
 } else {//If user viewing own report end here
     echo '<div class="ac-year-right"><p>' . get_string('academicyear', 'report_myfeedback') . ':</p>';
     require_once(dirname(__FILE__) . '/academicyear.php');
     echo '</div>';
 }
+
+echo '</div>';
 
 $archiveyear = substr_replace($res, '-', 2, 0); //for building the archive link
 $arch = $res;
