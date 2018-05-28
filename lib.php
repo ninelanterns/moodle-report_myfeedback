@@ -90,7 +90,13 @@ function report_myfeedback_extend_navigation_course($navigation, $course, $conte
  * @param bool $iscurrentuser Whether the logged-in user is current user
  * @param stdClass $course The course object
  */
-function report_myfeedback_myprofile_navigation(core_user\output\myprofile\tree $tree, $user, $iscurrentuser, $course) {//for comaptibility with v2.9 and later   
+function report_myfeedback_myprofile_navigation(core_user\output\myprofile\tree $tree, $user, $iscurrentuser, $course) {//for comaptibility with v2.9 and later 
+    global $CFG;
+    
+    if (!empty($CFG->hidemyfeedbackreport)) {
+        return true;
+    }
+    
     $url = new moodle_url('/report/myfeedback/index.php', array('userid' => $user->id));
     if (!empty($course)) {
         $url->param('course', $course->id);
