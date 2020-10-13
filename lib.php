@@ -5576,7 +5576,7 @@ class report_myfeedback {
                     //Add the assessment icon.
                     if ($assessmenticon == "") {
                         $assessmenticon = '<img src="' .
-                                $OUTPUT->image_url('icon', $record->assessmenttype) . '" ' .
+                                $OUTPUT->pix_url('icon', $record->assessmenttype) . '" ' .
                                 'class="icon" alt="' . $assessmenttype . '" title="' . $assessmenttype . '"  rel="tooltip" />';
                     }
                     //Set the sortable date before converting to d-M-y format 
@@ -5931,7 +5931,7 @@ class report_myfeedback {
                             $exceltable[$x]['Viewed'] = $viewexport;
                             ++$x;
 
-                            $fileicon = ' <img src="' . $OUTPUT->image_url('i/edit', 'core') . '" ' . 'class="icon" alt="edit">';
+                            $fileicon = ' <img src="' . $OUTPUT->pix_url('i/edit', 'core') . '" ' . 'class="icon" alt="edit">';
                             //The reflective notes and turnitin feedback
                             $tdid = $record->gradeitemid;
                             if (!$instn = $record->subpart) {
